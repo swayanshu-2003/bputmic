@@ -41,7 +41,7 @@ const Navbar: React.FC = () => {
       }`}
       style={{ fontFamily: "Raleway" }}
     >
-      <div className="max-w-7full mx-auto px-4 sm:px-6 lg:px-20">
+      <div className="max-w-7full mx-auto px-4 sm:px-6 lg:px-6">
         <div className="flex items-center justify-between h-16 sm:h-20">
           {/* Logo and Brand */}
           <a href="" className="flex-shrink-0 flex items-center">

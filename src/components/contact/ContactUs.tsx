@@ -30,8 +30,8 @@ const ContactUs = () => {
             </p>
             <p className="mt-2">
               <strong>Phone:</strong>{" "}
-              <a href="tel:+9199337724582" className="text-[#f82249]">
-                +91 99337724582
+              <a href="tel:+919337724582" className="text-[#f82249]">
+                +91 9337724582
               </a>
             </p>
             <p className="mt-2">
@@ -52,13 +52,13 @@ const ContactUs = () => {
               <strong>Affiliation:</strong> Associate Professor
             </p>
             <p className="mt-2">
-              <strong>Postal Address:</strong> Dept. of CSE, CUPGS, BPUT
+              <strong>Postal Address:</strong> Dept. of ECE, CUPGS, BPUT
               Rourkela, Odisha, India-769015
             </p>
             <p className="mt-2">
               <strong>Phone:</strong>{" "}
-              <a href="tel:+919437336969" className="text-[#f82249]">
-                +91 9437336969
+              <a href="tel:+917008505959" className="text-[#f82249]">
+                +91 7008505959
               </a>
             </p>
             <p className="mt-2">

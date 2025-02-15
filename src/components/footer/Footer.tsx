@@ -67,7 +67,7 @@ const Footer = () => {
             <span className="font-bold">Phone:</span> +91 99337724582
           </p>
           <p className="mt-2">
-            <span className="font-bold">Email:</span> dcrao.bput.ac.in
+            <span className="font-bold">Email:</span> bmic@bput.ac.in
           </p>
 
           {/* Social Icons */}

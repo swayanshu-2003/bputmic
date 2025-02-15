@@ -4,6 +4,18 @@ import React, { useState, useEffect, useCallback } from "react";
 
 import HeroBg1 from "../../assets/hero/hero-bg.jpg";
 import CountdownTimer from "../countdowntimer/CountdownTimer";
+import IICSImg from "../../assets/conferences/iics.webp";
+import PECSImg from "../../assets/conferences/pecs.webp";
+import SISImg from "../../assets/conferences/sis.webp";
+import SMCSImg from "../../assets/conferences/smcs.webp";
+import { ArrowRight } from "lucide-react";
+
+const conferences = [
+  { img: IICSImg, title: "IICS ", link: "/iics" },
+  { img: PECSImg, title: "PECS ", link: "/pecs" },
+  { img: SISImg, title: "SIS ", link: "/sis" },
+  { img: SMCSImg, title: "SMCS ", link: "/smcs" },
+];
 
 interface Slide {
   id: number;
@@ -20,9 +32,9 @@ const slides: Slide[] = [
     id: 1,
     image: HeroBg1,
     title: "BPUT",
-    title2: "MULTI-INTERNATIONAL CONFERENCE 2025",
+    title2: "MULTI-INTERNATIONAL CONFERENCE - 2025",
     description:
-      "14-18 September, 2025, Biju Patnaik University of Technology, Rourkela",
+      "14-16 November, 2025, Biju Patnaik University of Technology, Rourkela, Odisha, 769015",
     primaryCta: { text: "Get Started", href: "#start" },
     secondaryCta: { text: "Learn More", href: "#learn" },
   },
@@ -135,9 +147,9 @@ const HeroCarousel: React.FC = () => {
 
           {/* Content */}
           <div className="relative h-full flex items-center justify-center px-4 sm:px-6 lg:px-8">
-            <div className="max-w-7xl mx-auto text-center">
+            <div className="w-full mx-auto text-center">
               <h2
-                className={`text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-3 sm:mb-4 leading-tight sm:leading-tight md:leading-tight transform transition-all duration-1000 ${
+                className={`text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold text-white mb-3 sm:mb-4 leading-tight sm:leading-tight md:leading-tight transform transition-all duration-1000 ${
                   index === currentSlide
                     ? "translate-y-0 opacity-100"
                     : "translate-y-8 opacity-0"
@@ -146,13 +158,13 @@ const HeroCarousel: React.FC = () => {
                 {slide.title}
               </h2>
               <h2
-                className={`text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-3 sm:mb-4 leading-tight sm:leading-tight md:leading-tight transform transition-all duration-1000  ${
+                className={`text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold text-white mb-3 sm:mb-4 leading-tight sm:leading-tight md:leading-tight transform transition-all duration-1000  ${
                   index === currentSlide
                     ? "translate-y-0 opacity-100"
                     : "translate-y-8 opacity-0"
                 }`}
               >
-                <span className="text-primary-red">
+                <span className="text-primary-red font-bold">
                   {slide?.title2?.split(" ")[0]}&nbsp;
                 </span>
                 {slide?.title2?.split(" ").slice(1).join(" ")}
@@ -167,7 +179,8 @@ const HeroCarousel: React.FC = () => {
                 {slide.description}
               </p>
 
-              <CountdownTimer targetDate={"2025-03-20T00:00:00"} />
+              <CountdownTimer targetDate={"2025-11-14T00:00:00"} />
+
 
               <div
                 className={`max-w-full flex flex-row gap-3 sm:gap-4 justify-center items-center transform transition-all delay-400 duration-1000 ${
@@ -176,7 +189,7 @@ const HeroCarousel: React.FC = () => {
                     : "translate-y-8 opacity-0"
                 }`}
               >
-                <a
+                {/* <a
                   href={slide.primaryCta.href}
                   className="w-full sm:w-auto px-3 sm:px-8 py-1.5 sm:py-3 bg-white text-gray-900 rounded-full font-semibold hover:bg-gray-100 transition-colors duration-300 text-sm sm:text-base"
                 >
@@ -187,7 +200,7 @@ const HeroCarousel: React.FC = () => {
                   className="w-full sm:w-auto px-3 sm:px-8 py-1 sm:py-3 border-2 border-white text-white rounded-full font-semibold hover:bg-white/10 transition-colors duration-300 text-sm sm:text-base"
                 >
                   {slide.secondaryCta.text}
-                </a>
+                </a> */}
               </div>
             </div>
           </div>
@@ -227,9 +240,37 @@ const HeroCarousel: React.FC = () => {
           </button>
         </>
       )} */}
+      <div className="absolute bottom-6 sm:bottom-4  left-1/2 -translate-x-1/2 z-20 w-full max-w-7xl flex justify-evenly  mx-auto  py-6">
+        {conferences.map((conf, index) => (
+          <a
+            key={index}
+            href={conf.link}
+            className="w-56 relative group block overflow-hidden border-4 border-white transition-transform transform hover:scale-105"
+          >
+            {/* Image */}
+            <img
+              src={conf.img}
+              className="w-full  object-cover"
+              alt={conf.title}
+            />
+            {/* Overlay */}
+            <div className="absolute inset-0 bg-black bg-opacity-80 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity flex-col gap-3">
+              <span className="text-white text-lg font-semibold">
+                {conf.title}
+              </span>
+              <button className=" flex items-center px-3 py-1 bg-transparent font-semibold border-primary-red border-2 rounded-sm text-primary-red hover:bg-primary-red hover:text-white hover:border-none">
+                Visit
+               
+                  <ArrowRight className="ml-2" size={17} />
+              
+              </button>
+            </div>
+          </a>
+        ))}
+      </div>
 
       {/* Dot Indicators */}
-      <div className="absolute bottom-6 sm:bottom-8 left-1/2 -translate-x-1/2 z-20 flex gap-2 sm:gap-3 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full bg-black/20 backdrop-blur-sm">
+      {/* <div className="absolute bottom-6 sm:bottom-8 left-1/2 -translate-x-1/2 z-20 flex gap-2 sm:gap-3 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full bg-black/20 backdrop-blur-sm">
         {slides.map((_, index) => (
           <button
             key={index}
@@ -248,7 +289,7 @@ const HeroCarousel: React.FC = () => {
             />
           </button>
         ))}
-      </div>
+      </div> */}
 
       {/* Progress Bar */}
       {/* <div className="absolute bottom-0 left-0 w-full h-0.5 sm:h-1 bg-white/20 z-20">
