@@ -86,9 +86,9 @@ const HeroCarousel: React.FC = () => {
     setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
   }, []);
 
-  const goToSlide = (index: number) => {
-    setCurrentSlide(index);
-  };
+  // const goToSlide = (index: number) => {
+  //   setCurrentSlide(index);
+  // };
 
   useEffect(() => {
     if (!isPaused) {
