@@ -86,8 +86,8 @@ const ContactUs = () => {
               PHONE NUMBER
             </h3>
             <p className="mt-2">
-              <a href="tel:+9199337724582" className="text-[#f82249]">
-                +91 99337724582
+              <a href="tel:+919337724582" className="text-[#f82249]">
+                +91 9337724582
               </a>
             </p>
           </div>

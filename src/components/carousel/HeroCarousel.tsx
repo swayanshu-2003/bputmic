@@ -146,10 +146,10 @@ const HeroCarousel: React.FC = () => {
           <div className="absolute inset-0 bg-[rgba(6,12,34,0.8)]" />
 
           {/* Content */}
-          <div className="relative h-full flex items-center justify-center px-4 sm:px-6 lg:px-8">
+          <div className="relative h-full flex items-center justify-center px-4 sm:px-6 lg:px-8 mt-16">
             <div className="w-full mx-auto text-center">
               <h2
-                className={`text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold text-white mb-3 sm:mb-4 leading-tight sm:leading-tight md:leading-tight transform transition-all duration-1000 ${
+                className={`text-2xl sm:text-4xl md:text-4xl lg:text-5xl font-semibold text-white mb-3 sm:mb-4 leading-tight sm:leading-tight md:leading-tight transform transition-all duration-1000 ${
                   index === currentSlide
                     ? "translate-y-0 opacity-100"
                     : "translate-y-8 opacity-0"
@@ -158,7 +158,7 @@ const HeroCarousel: React.FC = () => {
                 {slide.title}
               </h2>
               <h2
-                className={`text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold text-white mb-3 sm:mb-4 leading-tight sm:leading-tight md:leading-tight transform transition-all duration-1000  ${
+                className={`text-2xl sm:text-4xl md:text-5xl lg:text-5xl font-semibold text-white mb-3 sm:mb-4 leading-tight sm:leading-tight md:leading-tight transform transition-all duration-1000  ${
                   index === currentSlide
                     ? "translate-y-0 opacity-100"
                     : "translate-y-8 opacity-0"
@@ -170,7 +170,7 @@ const HeroCarousel: React.FC = () => {
                 {slide?.title2?.split(" ").slice(1).join(" ")}
               </h2>
               <p
-                className={`text-lg sm:text-xl md:text-xl text-gray-200 mb-6 sm:mb-8 max-w-4xl mx-auto leading-relaxed transform transition-all delay-200 duration-1000 ${
+                className={`text-lg sm:text-lg md:text-lg text-gray-200 mb-6 sm:mb-8 max-w-4xl mx-auto leading-relaxed transform transition-all delay-200 duration-1000 ${
                   index === currentSlide
                     ? "translate-y-0 opacity-100"
                     : "translate-y-8 opacity-0"
@@ -179,8 +179,67 @@ const HeroCarousel: React.FC = () => {
                 {slide.description}
               </p>
 
-              <CountdownTimer targetDate={"2025-11-14T00:00:00"} />
-
+              <div className="flex items-start justify-between">
+                <div className=" z-20 w-full max-w-7xl flex justify-evenly  mx-auto  py-6">
+                  {conferences.slice(0, 2).map((conf, index) => (
+                    <a
+                      key={index}
+                      href={conf.link}
+                      className="w-56 relative group block overflow-hidden border-4 border-white transition-transform transform hover:scale-105"
+                    >
+                      {/* Image */}
+                      <img
+                        src={conf.img}
+                        className="w-full  object-cover"
+                        alt={conf.title}
+                      />
+                      {/* Overlay */}
+                      <div className="absolute inset-0 bg-black bg-opacity-80 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity flex-col gap-3">
+                        <span className="text-white text-lg font-semibold">
+                          {conf.title}
+                        </span>
+                        <button className=" flex items-center px-3 py-1 bg-transparent font-semibold border-primary-red border-2 rounded-sm text-primary-red hover:bg-primary-red hover:text-white hover:border-none">
+                          Visit
+                          <ArrowRight className="ml-2" size={17} />
+                        </button>
+                      </div>
+                    </a>
+                  ))}
+                </div>
+                <div className="flec flex-col">
+                  <CountdownTimer targetDate={"2025-11-14T00:00:00"} />
+                  <h1 className="text-2xl text-white font-semibold italic lowercase">
+                    LEFT FOR THE{" "}
+                    <span className="text-primary-red">CONFERENCE</span>
+                  </h1>
+                </div>
+                <div className="z-20 w-full max-w-7xl flex justify-evenly  mx-auto  py-6">
+                  {conferences.slice(2).map((conf, index) => (
+                    <a
+                      key={index}
+                      href={conf.link}
+                      className="w-56 relative group block overflow-hidden border-4 border-white transition-transform transform hover:scale-105"
+                    >
+                      {/* Image */}
+                      <img
+                        src={conf.img}
+                        className="w-full  object-cover"
+                        alt={conf.title}
+                      />
+                      {/* Overlay */}
+                      <div className="absolute inset-0 bg-black bg-opacity-80 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity flex-col gap-3">
+                        <span className="text-white text-lg font-semibold">
+                          {conf.title}
+                        </span>
+                        <button className=" flex items-center px-3 py-1 bg-transparent font-semibold border-primary-red border-2 rounded-sm text-primary-red hover:bg-primary-red hover:text-white hover:border-none">
+                          Visit
+                          <ArrowRight className="ml-2" size={17} />
+                        </button>
+                      </div>
+                    </a>
+                  ))}
+                </div>
+              </div>
 
               <div
                 className={`max-w-full flex flex-row gap-3 sm:gap-4 justify-center items-center transform transition-all delay-400 duration-1000 ${
@@ -240,34 +299,6 @@ const HeroCarousel: React.FC = () => {
           </button>
         </>
       )} */}
-      <div className="absolute bottom-6 sm:bottom-4  left-1/2 -translate-x-1/2 z-20 w-full max-w-7xl flex justify-evenly  mx-auto  py-6">
-        {conferences.map((conf, index) => (
-          <a
-            key={index}
-            href={conf.link}
-            className="w-56 relative group block overflow-hidden border-4 border-white transition-transform transform hover:scale-105"
-          >
-            {/* Image */}
-            <img
-              src={conf.img}
-              className="w-full  object-cover"
-              alt={conf.title}
-            />
-            {/* Overlay */}
-            <div className="absolute inset-0 bg-black bg-opacity-80 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity flex-col gap-3">
-              <span className="text-white text-lg font-semibold">
-                {conf.title}
-              </span>
-              <button className=" flex items-center px-3 py-1 bg-transparent font-semibold border-primary-red border-2 rounded-sm text-primary-red hover:bg-primary-red hover:text-white hover:border-none">
-                Visit
-               
-                  <ArrowRight className="ml-2" size={17} />
-              
-              </button>
-            </div>
-          </a>
-        ))}
-      </div>
 
       {/* Dot Indicators */}
       {/* <div className="absolute bottom-6 sm:bottom-8 left-1/2 -translate-x-1/2 z-20 flex gap-2 sm:gap-3 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full bg-black/20 backdrop-blur-sm">

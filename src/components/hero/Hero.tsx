@@ -1,40 +1,99 @@
-import IICSImg from "../../assets/conferences/iics.webp";
-import PECSImg from "../../assets/conferences/pecs.webp";
-import SISImg from "../../assets/conferences/sis.webp";
-import SMCSImg from "../../assets/conferences/smcs.webp";
-
-const conferences = [
-  { img: IICSImg, title: "IICS Conference", link: "/iics" },
-  { img: PECSImg, title: "PECS Conference", link: "/pecs" },
-  { img: SISImg, title: "SIS Conference", link: "/sis" },
-  { img: SMCSImg, title: "SMCS Conference", link: "/smcs" },
-];
-
 const Hero = () => {
+  const tracks = [
+    {
+      title: "Intelligent Information and Computing Systems (IICS)",
+      description:
+        "Focusing on advancements in computing, artificial intelligence, and information technology. Researchers will discuss the latest breakthroughs in machine learning, big data, cybersecurity, and computational intelligence, shaping the future of the digital world.",
+    },
+    {
+      title: "Physical, Environmental, and Computational Sciences (PECS)",
+      description:
+        "Covering interdisciplinary topics from physics, chemistry, mathematics, and computational methods. This track aims to foster collaboration between theoretical and applied sciences to solve real-world environmental and physical challenges.",
+    },
+    {
+      title: "Society, Informatics, and Sustainability (SIS)",
+      description:
+        "Exploring the role of informatics in management, sustainable development, and societal impact. Experts will discuss how technology-driven solutions can enhance governance, public policy, and sustainability efforts worldwide.",
+    },
+    {
+      title: "Smart Materials, Composites, and Structures (SMCS)",
+      description:
+        "A platform for researchers discussing innovations in material science, composites, and structures. Topics will include the development of new-age materials, nanotechnology applications, and advancements in structural engineering.",
+    },
+  ];
+
   return (
-    <div className="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 p-10 max-w-7xl mx-auto">
-      {conferences.map((conf, index) => (
-        <a
-          key={index}
-          href={conf.link}
-          className="relative group block overflow-hidden rounded-2xl shadow-lg transition-transform transform hover:scale-105"
-        >
-          {/* Image */}
-          <img
-            src={conf.img}
-            className="w-full  object-cover rounded-2xl"
-            alt={conf.title}
-          />
-          {/* Overlay */}
-          <div className="absolute inset-0 bg-black bg-opacity-80 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity flex-col gap-3">
-            <span className="text-white text-lg font-semibold">
-              {conf.title}
+    <section id="about" className=" py-10 px-5 my-10">
+      <div className="max-w-full mx-auto">
+        <h2 className="text-3xl font-bold text-center text-gray-900">
+          WELCOME TO BMIC-2025
+        </h2>
+        <p className="text-center text-gray-600 mt-2">About BMIC - 2025</p>
+        <div className="w-16 h-1 bg-red-500 mx-auto mt-2" />
+        <div className="max-w-7xl mx-auto text-zinc-700 mt-7 text-justify leading-tight">
+          <p className="text-base mb-4">
+            Bijupatnaik University of Technology (BPUT), Odisha, proudly
+            presents the
+            <span className="font-semibold text-[#112363]">
+              {" "}
+              BPUT Multi-International Conference-2025
             </span>
-            <button className="px-3 py-1 bg-transparent font-semibold border-primary-red border-2 rounded-sm text-primary-red hover:bg-primary-red hover:text-white hover:border-none">Visit</button>
-          </div>
-        </a>
-      ))}
-    </div>
+            , a premier event bringing together global researchers,
+            academicians, and industry leaders to explore cutting-edge
+            advancements across multiple disciplines. This year, the conference
+            will serve as a platform for discussions on emerging trends in
+            technology, science, and management.
+          </p>
+
+          <p className="text-base mb-4">
+            The conference will be hosted at{" "}
+            <span className="font-semibold text-[#112363]">
+              Biju Patnaik University of Technology, Rourkela, Odisha, 769015
+            </span>
+            , from{" "}
+            <span className="font-semibold text-[#112363]">
+              November 14th to 16th, 2025
+            </span>
+            . Scholars and professionals from various fields are invited to
+            share their research, collaborate, and contribute to shaping the
+            future of innovation and knowledge exchange.
+          </p>
+
+          <h3 className="text-2xl font-semibold text-[#112363] mt-6 mb-3">
+            Conference Tracks
+          </h3>
+
+          <p className="text-base mb-3">
+            The conference will feature{" "}
+            <span className="font-semibold">four specialized tracks</span>, each
+            dedicated to a crucial domain of research:
+          </p>
+
+          {tracks.map((track, index) => (
+            <div key={index} className="mb-3 ml-6">
+              <span className="font-semibold text-[#112363] leading-8 ">
+                {track.title}:
+              </span>
+              <br />
+
+              <span className="leading-6 ">{track.description}</span>
+            </div>
+          ))}
+
+          <h3 className="text-xl font-semibold text-[#112363] mt-6 mb-3">
+            Join Us
+          </h3>
+
+          <p className="text-base">
+            We welcome researchers, professionals, and students to submit their
+            original work, exchange ideas, and engage in discussions that will
+            shape the future of science and technology. This conference is an
+            opportunity to network with industry pioneers, explore new
+            collaborations, and contribute to groundbreaking advancements.
+          </p>
+        </div>
+      </div>
+    </section>
   );
 };
 

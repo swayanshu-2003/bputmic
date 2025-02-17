@@ -3,17 +3,17 @@ import { Menu, X } from "lucide-react";
 import Logo from "../../assets/logo/bput-logo.png";
 
 const navLinks = [
-  { href: "#home", label: "Home" },
-  { href: "#about", label: "About" },
-  { href: "#speakers", label: "Speakers" },
-  { href: "#schedule", label: "Schedule" },
-  { href: "#registration", label: "Registration" },
-  { href: "#committee", label: "Committee" },
-  { href: "#paper-submission", label: "Paper Submission" },
-  { href: "#venue", label: "Venue" },
-  { href: "#hotels", label: "Hotels" },
-  { href: "#gallery", label: "Gallery" },
-  { href: "#contact", label: "Contact" },
+  { href: "#home", label: "Home", type: "section" },
+  { href: "#about", label: "About", type: "section" },
+  { href: "/committee", label: "Committee", type: "page" },
+  { href: "#schedule", label: "Schedule", type: "section" },
+  { href: "#registration", label: "Registration", type: "section" },
+  { href: "#speakers", label: "Speakers", type: "section" },
+  { href: "/paper-submission", label: "Paper Submission", type: "page" },
+  { href: "#venue", label: "Venue", type: "section" },
+  { href: "#hotels", label: "Hotels", type: "section" },
+  { href: "#gallery", label: "Gallery", type: "section" },
+  { href: "#contact", label: "Contact", type: "section" },
 ];
 
 const Navbar: React.FC = () => {
@@ -34,9 +34,31 @@ const Navbar: React.FC = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  const handleNavigation = (href: string, type: string) => {
+    if (type === "page") {
+      window.location.href = href; // Navigate to a new page
+    } else {
+      if (window.location.pathname !== "/") {
+        localStorage.setItem("scrollToSection", href); // Store section before redirecting
+        window.location.href = "/"; // Redirect to homepage
+      } else {
+        document.querySelector(href)?.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  };
+
+  // Auto-scroll after the homepage loads
+  window.onload = () => {
+    const section = localStorage.getItem("scrollToSection");
+    if (section) {
+      localStorage.removeItem("scrollToSection"); // Clear after using
+      document.querySelector(section)?.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 h-fit ${
         isScrolled ? "bg-[#060c22fa] backdrop-blur-md " : "bg-transparent"
       }`}
       style={{ fontFamily: "Raleway" }}
@@ -60,7 +82,7 @@ const Navbar: React.FC = () => {
             >
               BPUT
               <span
-                className="text-primary-red text-xl sm:text-[32px] font-semibold"
+                className="text-primary-red text-xl sm:text-[31px] font-semibold"
                 style={{ fontFamily: "Roboto Slab" }}
               >
                 &nbsp;MIC
@@ -69,19 +91,19 @@ const Navbar: React.FC = () => {
           </a>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex md:items-center md:space-x-8">
+          <div className="hidden md:flex md:items-center md:space-x-6 ">
             {navLinks.map((link) => (
-              <a
+              <span
+                onClick={() => handleNavigation(link.href, link.type)}
                 key={link.href}
-                href={link.href}
-                className={`text-sm lg:text-base font-medium transition-all duration-300 hover:scale-105 ${
+                className={`cursor-pointer text-sm lg:text-sm font-medium transition-all duration-300 hover:scale-105 ${
                   isScrolled
                     ? "text-white hover:text-indigo-600"
                     : "text-white/90 hover:text-white"
                 }`}
               >
                 {link.label}
-              </a>
+              </span>
             ))}
           </div>
 
@@ -100,7 +122,11 @@ const Navbar: React.FC = () => {
               {isMenuOpen ? (
                 <X className="block h-6 w-6" color="white" aria-hidden="true" />
               ) : (
-                <Menu className="block h-6 w-6 " color="white" aria-hidden="true" />
+                <Menu
+                  className="block h-6 w-6 "
+                  color="white"
+                  aria-hidden="true"
+                />
               )}
             </button>
           </div>
