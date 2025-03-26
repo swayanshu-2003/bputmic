@@ -52,7 +52,7 @@ const Hero = () => {
             </span>
             , from{" "}
             <span className="font-semibold text-[#112363]">
-              November 14th to 16th, 2025
+              December 19th to 21st, 2025
             </span>
             . Scholars and professionals from various fields are invited to
             share their research, collaborate, and contribute to shaping the

@@ -34,7 +34,7 @@ const slides: Slide[] = [
     title: "BPUT",
     title2: "MULTI-INTERNATIONAL CONFERENCE - 2025",
     description:
-      "14-16 November, 2025, Biju Patnaik University of Technology, Rourkela, Odisha, 769015",
+      "19th-21st December, 2025, Biju Patnaik University of Technology, Rourkela, Odisha, 769015",
     primaryCta: { text: "Get Started", href: "#start" },
     secondaryCta: { text: "Learn More", href: "#learn" },
   },
@@ -207,7 +207,7 @@ const HeroCarousel: React.FC = () => {
                   ))}
                 </div>
                 <div className="flec flex-col">
-                  <CountdownTimer targetDate={"2025-11-14T00:00:00"} />
+                  <CountdownTimer targetDate={"2025-12-19T00:00:00"} />
                   <h1 className="text-2xl text-white font-semibold italic lowercase">
                     LEFT FOR THE{" "}
                     <span className="text-primary-red">CONFERENCE</span>

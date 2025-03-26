@@ -6,6 +6,7 @@ const navLinks = [
   { href: "#home", label: "Home", type: "section" },
   { href: "#about", label: "About", type: "section" },
   { href: "/committee", label: "Committee", type: "page" },
+  { href: "/publication-ethics", label: "Publication Ethics", type: "page" },
   { href: "#schedule", label: "Schedule", type: "section" },
   { href: "#registration", label: "Registration", type: "section" },
   { href: "#speakers", label: "Speakers", type: "section" },
