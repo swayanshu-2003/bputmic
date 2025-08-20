@@ -29,6 +29,7 @@ import SuvenduKRath from "../../assets/committee/suvendu-k-rath.webp";
 const committeeMembers = [
   {
     committee: "Chief Patron",
+    committe_id:"chief_patron",
     members: [
       {
         name: "Prof. Amiya Kumar Rath",
@@ -40,10 +41,11 @@ const committeeMembers = [
   },
   {
     committee: "Patron",
+    committe_id:"patron",
     members: [
       {
         name: "Prof. Sivkumar Mishra",
-        designation: "Director",
+        designation: "Director I/C",
         organization: "CUPGS, BPUT, Odisha, Rourkela",
         image: ShivKMishra,
       },
@@ -57,6 +59,7 @@ const committeeMembers = [
   },
   {
     committee: "Co-Patron",
+    committe_id:"co_patron",
     members: [
       {
         name: "Prof. Manas Ranjan Nayak",
@@ -68,10 +71,12 @@ const committeeMembers = [
   },
   {
     committee: "General Chair",
+    committe_id:"general_chair",
     members: [
       {
         name: "Prof. Bibhudatta Sahoo",
-        designation: "Professor",
+        designation: "",
+        // designation: "Professor",
         organization: "NIT, Rourkela, Odisha",
         image: ManasRNayak,
       },
@@ -79,16 +84,19 @@ const committeeMembers = [
   },
   {
     committee: "Program Chair",
+    committe_id:"program_chair",
     members: [
       {
         name: "Prof. Srinivas Sethi",
-        designation: "Professor",
+        designation: "",
+        // designation: "Professor",
         organization: "IGIT Sarang, Dhenkanal, Odisha",
         image: ManasRNayak,
       },
       {
         name: "Prof. Mufti Mahmud",
-        designation: "Professor",
+        designation: "",
+        // designation: "Professor",
         organization: "KFUPM, Saudi Arabia",
         image: ManasRNayak,
       },
@@ -96,6 +104,7 @@ const committeeMembers = [
   },
   {
     committee: "Organizing Chair",
+    committe_id:"organizing_chair",
     members: [
       {
         name: "Mrs. Nishi Poonam Minz",
@@ -116,8 +125,8 @@ const committeeMembers = [
         image: SujitKKhuntia,
       },
       {
-        name: "Prof. Sujit Kumar Das",
-        designation: "Director P&IT",
+        name: "Mr. Manoranjan Mohapatra",
+        designation: "Director I/C P&IT",
         organization: "BPUT, Odisha, Rourkela",
         image: SujitKDas,
       },
@@ -136,24 +145,8 @@ const committeeMembers = [
     ],
   },
   {
-    committee: "Convenors",
-    members: [
-      {
-        name: "Prof. D. Chandrasekhar Rao",
-        designation: "Associate Professor",
-        organization: "CUPGS, BPUT, Odisha, Rourkela",
-        image: DCRao,
-      },
-      {
-        name: "Prof. Bikramaditya Das",
-        designation: "Associate Professor",
-        organization: "CUPGS, BPUT, Odisha, Rourkela",
-        image: BikramadityaDas,
-      },
-    ],
-  },
-  {
     committee: "Finance Chair",
+    committe_id:"finance_chair",
     members: [
       {
         name: "Mrs. Sebati Dansena",
@@ -179,11 +172,36 @@ const committeeMembers = [
         organization: "BPUT, Odisha, Rourkela",
         image: SuvenduKRath,
       },
+      {
+        name: "Prof. D. Chandrasekhar Rao",
+        designation: "Associate Professor",
+        organization: "CUPGS, BPUT, Odisha, Rourkela",
+        image: DCRao,
+      },
+    ],
+  },
+  {
+    committee: "Convenors",
+    committe_id:"convenors",
+    members: [
+      {
+        name: "Prof. D. Chandrasekhar Rao",
+        designation: "Associate Professor",
+        organization: "CUPGS, BPUT, Odisha, Rourkela",
+        image: DCRao,
+      },
+      {
+        name: "Prof. Bikramaditya Das",
+        designation: "Associate Professor",
+        organization: "CUPGS, BPUT, Odisha, Rourkela",
+        image: BikramadityaDas,
+      },
     ],
   },
 
   {
     committee: "Hospitality Chair",
+    committe_id:"hospitality_chair",
     members: [
       {
         name: "Prof. Suvendra Kumar Jayashingh",
@@ -219,6 +237,7 @@ const committeeMembers = [
   },
   {
     committee: "Logistic Chair",
+    committe_id:"logistic_chair",
     members: [
       {
         name: "Prof. Manoj Kumar Sahu",
@@ -248,6 +267,7 @@ const committeeMembers = [
   },
   {
     committee: "Accomodation Chair",
+    committe_id:"accomodation_chair",
     members: [
       {
         name: "Prof. Bibhuti Bhusan Mukharjee",
@@ -277,6 +297,7 @@ const committeeMembers = [
   },
   {
     committee: "Publicity Chair",
+    committe_id:"publicity_chair",
     members: [
       {
         name: "Prof. Bibhuti Bhusan Mukharjee",
@@ -309,10 +330,10 @@ const committeeMembers = [
 const Committee = () => {
   return (
     <div className="min-h-screen ">
-      <TopBanner text={"Committee"} />
+      <TopBanner text={"Core Committee"} />
       <div className="max-w-full w-full flex gap-6 flex-col items-center my-16">
-        {committeeMembers?.map((mem, index) => (
-          <div key={index} className="mb-14 flex gap-4 flex-col items-center">
+        {committeeMembers?.slice(0, 1)?.map((mem, index) => (
+          <div key={index} className="mb-72 flex gap-4 flex-col items-center">
             <div className="leading-tight mb-4">
               <h2 className="text-3xl font-bold text-center text-gray-900 uppercase">
                 {mem.committee}
@@ -320,17 +341,55 @@ const Committee = () => {
               {/* <p className="text-center text-gray-600 mt-2 ">of BMIC - 2025</p> */}
               <div className="w-16 h-1 bg-red-500 mx-auto mt-2" />
             </div>
+
             <div className="flex flex-wrap gap-6">
+              {mem?.members?.map((person, id) => (
+                <div
+                  key={id}
+                  className="transition-[filter] relative w-[250px] h-[90px] bg-[#FAEDE4] font-['Roboto_Flex'] border-b-2 border-b-[#F04E29] flex flex-col items-center  overflow-visible "
+                >
+                  <img
+                    className="w-full duration-150 h-[250px] object-cover object-top rounded-t-lg group-hover:rounded-br-[100px] transition-all"
+                    src={person?.image}
+                    alt={person?.name}
+                  />
+
+                  <div className="p-3 text-center bg-[#fbeee3] border-b-2 border-[#F04E29]">
+                    <p className="text-[#262626] text-lg font-medium">
+                      {person?.name}
+                    </p>
+                    <p className="text-[#777674] text-sm">
+                      {person?.designation}, {person?.organization}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        ))}
+        {committeeMembers?.slice(1)?.map((mem, index) => (
+          <div key={index} className="mb-14 flex gap-4 flex-col items-center" id={committeeMembers[index+2]?.committe_id}>
+            <div className="leading-tight mb-4">
+              <h2 className="text-3xl font-bold text-center text-gray-900 uppercase">
+                {mem.committee}
+              </h2>
+              {/* <p className="text-center text-gray-600 mt-2 ">of BMIC - 2025</p> */}
+              <div className="w-16 h-1 bg-red-500 mx-auto mt-2" />
+            </div>
+
+            <div className="flex flex-wrap gap-6 justify-center">
               {mem?.members?.map((person, id) => (
                 <div
                   key={id}
                   className="group  transition-[filter] relative w-[250px] h-[90px] bg-[#FAEDE4] font-['Roboto_Flex'] border-b-2 border-b-[#F04E29] flex flex-col items-center  overflow-visible "
                 >
-                  {/* <img
-                    className="w-full  group-hover:scale-105 duration-150 h-[250px] object-cover rounded-t-lg group-hover:rounded-br-[100px] transition-all"
-                    src={person?.image}
-                    alt={person?.name}
-                  /> */}
+                  {/* {mem?.committee === "Chief Patron" && (
+                    <img
+                      className="w-full  group-hover:scale-105 duration-150 h-[250px] object-cover rounded-t-lg group-hover:rounded-br-[100px] transition-all"
+                      src={person?.image}
+                      alt={person?.name}
+                    />
+                  )} */}
                   <div className="p-3 text-center overflow-hidden">
                     <p className="text-[#262626] text-lg font-medium">
                       {person?.name}

@@ -28,7 +28,7 @@ const CountdownTimer = ({ targetDate }: any) => {
   }, [targetDate]);
 
   return (
-    <div className="flex space-x-8 text-white text-5xl font-bold bg-transparent mx-auto p-4 rounded-lg w-fit my-6">
+    <div className="flex space-x-8 text-white text-5xl font-bold bg-transparent mx-auto p-4 rounded-lg w-fit md:my-6">
       {Object.entries(timeLeft).map(([unit, value]) => (
         <div key={unit} className="text-center">
           <span className="block">

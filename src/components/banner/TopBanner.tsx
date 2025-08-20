@@ -1,6 +1,6 @@
 // import { MdOutlineKeyboardArrowRight } from "react-icons/md";
 // import { Link } from "react-router-dom";
-import BannerImg from "../../assets/gallery/9.webp";
+import BannerImg from "../../assets/gallery/bg.webp";
 
 const TopBanner = ({
   bannerImage = BannerImg,

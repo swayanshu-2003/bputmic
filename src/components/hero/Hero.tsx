@@ -6,9 +6,9 @@ const Hero = () => {
         "Focusing on advancements in computing, artificial intelligence, and information technology. Researchers will discuss the latest breakthroughs in machine learning, big data, cybersecurity, and computational intelligence, shaping the future of the digital world.",
     },
     {
-      title: "Physical, Environmental, and Computational Sciences (PECS)",
+      title: "Smart Materials, Composites, and Structures (SMCS)",
       description:
-        "Covering interdisciplinary topics from physics, chemistry, mathematics, and computational methods. This track aims to foster collaboration between theoretical and applied sciences to solve real-world environmental and physical challenges.",
+        "A platform for researchers discussing innovations in material science, composites, and structures. Topics will include the development of new-age materials, nanotechnology applications, and advancements in structural engineering.",
     },
     {
       title: "Society, Informatics, and Sustainability (SIS)",
@@ -16,9 +16,9 @@ const Hero = () => {
         "Exploring the role of informatics in management, sustainable development, and societal impact. Experts will discuss how technology-driven solutions can enhance governance, public policy, and sustainability efforts worldwide.",
     },
     {
-      title: "Smart Materials, Composites, and Structures (SMCS)",
+      title: "Physical, Environmental, and Computational Sciences (PECS)",
       description:
-        "A platform for researchers discussing innovations in material science, composites, and structures. Topics will include the development of new-age materials, nanotechnology applications, and advancements in structural engineering.",
+        "Covering interdisciplinary topics from physics, chemistry, mathematics, and computational methods. This track aims to foster collaboration between theoretical and applied sciences to solve real-world environmental and physical challenges.",
     },
   ];
 
@@ -26,9 +26,9 @@ const Hero = () => {
     <section id="about" className=" py-10 px-5 my-10">
       <div className="max-w-full mx-auto">
         <h2 className="text-3xl font-bold text-center text-gray-900">
-          WELCOME TO BMIC-2025
+          WELCOME TO BMIC-ETET 2025
         </h2>
-        <p className="text-center text-gray-600 mt-2">About BMIC - 2025</p>
+        <p className="text-center text-gray-600 mt-2">About BMIC-ETET 2025</p>
         <div className="w-16 h-1 bg-red-500 mx-auto mt-2" />
         <div className="max-w-7xl mx-auto text-zinc-700 mt-7 text-justify leading-tight">
           <p className="text-base mb-4">
@@ -36,7 +36,8 @@ const Hero = () => {
             presents the
             <span className="font-semibold text-[#112363]">
               {" "}
-              BPUT Multi-International Conference-2025
+              BPUT Multi-International Conference on Emerging Trends & Evolving
+              Technology-2025
             </span>
             , a premier event bringing together global researchers,
             academicians, and industry leaders to explore cutting-edge
@@ -59,14 +60,16 @@ const Hero = () => {
             future of innovation and knowledge exchange.
           </p>
 
-          <h3 className="text-2xl font-semibold text-[#112363] mt-6 mb-3">
-            Conference Tracks
-          </h3>
+          {/* <h3 className="text-2xl font-semibold text-[#112363] mt-6 mb-3">
+            Multi International Conference
+          </h3> */}
 
           <p className="text-base mb-3">
-            The conference will feature{" "}
+            {/* The conference will feature{" "}
             <span className="font-semibold">four specialized tracks</span>, each
-            dedicated to a crucial domain of research:
+            dedicated to a crucial domain of research: */}
+            This multi-international conference features a crucial domain of
+            research :
           </p>
 
           {tracks.map((track, index) => (

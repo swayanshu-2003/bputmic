@@ -64,7 +64,7 @@ const Footer = () => {
             Odisha, India, 769015
           </p>
           <p className="mt-3">
-            <span className="font-bold">Phone:</span> +91 99337724582
+            <span className="font-bold">Phone:</span> 0661-248-2556
           </p>
           <p className="mt-2">
             <span className="font-bold">Email:</span> bmic@bput.ac.in

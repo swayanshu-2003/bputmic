@@ -2,11 +2,9 @@ import { FaUser, FaMapMarkerAlt, FaPhone, FaEnvelope } from "react-icons/fa";
 
 const ContactUs = () => {
   return (
-    <section className="bg-[#f9f9ff] py-10 px-5 my-10">
+    <section className="bg-[#f9f9ff] py-10 px-5 my-10" id="contact">
       <div className="max-w-7xl mx-auto text-center">
-        <h2 className="text-2xl md:text-3xl font-bold ">
-          CONTACT US
-        </h2>
+        <h2 className="text-2xl md:text-3xl font-bold ">CONTACT US</h2>
         <p className="text-gray-600 mt-2">
           If you have any questions or need further information, please
           don&apos;t hesitate to reach out to us.
@@ -45,9 +43,7 @@ const ContactUs = () => {
           {/* Contact 2 */}
           <div className="border-b  p-6  ">
             <FaUser className="text-[#f82249] text-3xl mx-auto" />
-            <h3 className="text-lg font-bold  mt-4">
-              DR. BIKRAMADITYA DAS
-            </h3>
+            <h3 className="text-lg font-bold  mt-4">DR. BIKRAMADITYA DAS</h3>
             <p className="mt-2">
               <strong>Affiliation:</strong> Associate Professor
             </p>
@@ -82,12 +78,10 @@ const ContactUs = () => {
           {/* Phone Number */}
           <div className="border-r  p-6   text-center">
             <FaPhone className="text-[#f82249] text-3xl mx-auto" />
-            <h3 className="text-lg font-semibold  mt-4">
-              PHONE NUMBER
-            </h3>
+            <h3 className="text-lg font-semibold  mt-4">PHONE NUMBER</h3>
             <p className="mt-2">
               <a href="tel:+919337724582" className="text-[#f82249]">
-                +91 9337724582
+                0661-248-2556
               </a>
             </p>
           </div>
@@ -98,7 +92,7 @@ const ContactUs = () => {
             <h3 className="text-lg font-semibold  mt-4">EMAIL</h3>
             <p className="mt-2">
               <a href="mailto:dcrao.bput.ac.in" className="text-[#f82249]">
-                dcrao@bput.ac.in
+                bmic@bput.ac.in
               </a>
             </p>
           </div>
