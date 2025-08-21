@@ -4,7 +4,7 @@ import {events} from "../../constants/dates"
 
 const Timelines = () => {
   return (
-    <div className="m-6 w-full flex flex-col items-center justify-center">
+    <div className="md:m-6 w-full flex flex-col items-center justify-center">
       <h2 className="text-3xl font-bold text-center text-gray-900">
         IMPORTANT DATES
       </h2>

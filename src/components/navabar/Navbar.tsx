@@ -366,7 +366,7 @@ const Navbar: React.FC = () => {
           <a href="/" className="flex-shrink-0 flex items-center">
             <img src={Logo} alt="bput logo" className="w-10 h-10" />
             <img src={BmicLogo} alt="bmic logo" className="w-10 h-10" />
-            <span className="ml-2 text-3xl font-bold text-white font-raleway">
+            <span className="ml-2 text-2xl md:text-3xl font-bold text-white font-raleway">
               BMIC-ETET<span className="text-primary-red ml-1">2025</span>
             </span>
           </a>
