@@ -327,208 +327,70 @@ export const coreCommitteeMembers = [
 ];
 
 export const TpcMembers = [
-  {
-    name: "Sanjib Kumar Nayak",
-    organization: "Veer Surendra Sai University Of Technology Burla",
-  },
-  { name: "Rajiv Senapati", organization: "Srm University, Andhra Pradesh" },
-  {
-    name: "Sudheer Babu Punuri",
-    organization: "Srm University, Andhra Pradesh",
-  },
-  { name: "Om Prakash Jena", organization: "Ravenshaw University, Cuttack" },
-  {
-    name: "Soumya Das",
-    organization: "Government College Of Engineering Kalahandi",
-  },
-  {
-    name: "Subash Ranjan Kabat",
-    organization: "Radhakrishna Institute Of Technology And Engineering",
-  },
-  { name: "Sanjaya Kumar Panda", organization: "Nit Warangal" },
+  { name: "Ajit Kumar Senapati", organization: "Einstein Academy Of Technology And Management, Bhubaneswar" },
+  { name: "Amar Ranjan Dash", organization: "Parala Maharaja Engineering College" },
   { name: "Anitha A", organization: "Vellore Institute Of Technology" },
-  { name: "Gunamani Jena", organization: "Roland Institute Of Technology" },
-  {
-    name: "S Gopal Krishna Patro",
-    organization: "School Of Engineering, Sreenidhi University, Hyderabad",
-  },
-  {
-    name: "Malti Nagle",
-    organization: "Pranveer Singh Institute Of Technology, Kanpur",
-  },
-  { name: "Sumit Kar", organization: "Biet, Bhadrak" },
-  {
-    name: "Manoj Kumar Patra",
-    organization: "National Institute Of Technology Warangal",
-  },
-  { name: "Priyadarsan Parida", organization: "Giet University" },
-  {
-    name: "Satyasundara Mahapatra",
-    organization: "Pranveer Singh Institute Of Technology , Kanpur",
-  },
-  {
-    name: "Raghunandan Swain",
-    organization: "Parala Maharaja Engineering College",
-  },
-  {
-    name: "Sambit Kumar Mishra",
-    organization: "Gandhi Institute For Education And Technology, Baniatangi",
-  },
-  {
-    name: "Sasmita Acharya",
-    organization: "Veer Surendra Sai University Of Technology",
-  },
-  {
-    name: "Dillip Kumar Biswal",
-    organization: "Aryan Institute Of Engineering And Technology, Bhubaneswar",
-  },
-  {
-    name: "Santanu Kumar Dash",
-    organization: "Vellore Institute Of Technology, Vellore, India",
-  },
-  {
-    name: "Subhransu Sekhar Dash",
-    organization: "Government College Of Engineering, Kalahandi",
-  },
-  {
-    name: "Purnendu Mishra",
-    organization: "Vikash Institute Of Technology, Bargarh",
-  },
-  {
-    name: "Bighnaraj Naik",
-    organization: "Veer Surendra Sai University Of Technology, Burla",
-  },
-  { name: "K Hemant Kumar Reddy", organization: "Vit-Ap University" },
-  {
-    name: "Ramesh Kumar Sahoo",
-    organization: "Birla Global University, Bhubaneswar",
-  },
-  { name: "Hemant Kumar Apat", organization: "Kiit Deemed University" },
-  {
-    name: "Kakita Murali Gopal",
-    organization:
-      "Gandhi Institute Of Engineering And Technology University, Odisha",
-  },
-  {
-    name: "Gopal Behera",
-    organization: "Government College Of Engineering Kalahandi",
-  },
-  {
-    name: "Purna Chandra Sethi",
-    organization: "Rama Devi Women's University, Bhubaneswar",
-  },
-  {
-    name: "Ajit Kumar Senapati",
-    organization: "Einstein Academy Of Technology And Management, Bhubaneswar",
-  },
-  { name: "Pushkar Kishore", organization: "Kiit University" },
-  {
-    name: "Suman Kumar Das",
-    organization: "University Of Brescia, Brescia, Italy",
-  },
-  { name: "Sandipan Sahu", organization: "Amity University Kolkata" },
-  {
-    name: "Sharmila Subramanian",
-    organization: "Astha School Of Management",
-  },
-  {
-    name: "Debabrata Dansana",
-    organization: "Rajendra University, Balangir",
-  },
   { name: "Arun Kumar", organization: "Nit Rourkela" },
-  {
-    name: "Prahallad Kumar Sahu",
-    organization:
-      "Gandhi Institute Of Engineering And Technology, University, Gunupur",
-  },
-  {
-    name: "Sruti Ranjan Mishra",
-    organization: "Gandhi Institute For Education And Management, Baniatangi",
-  },
-  {
-    name: "Yatindra Gopal",
-    organization: "National Institute Of Technology, Arunachal Pradesh",
-  },
-  {
-    name: "Ranjan Keshari Pati",
-    organization: "Modern Engineering And Management Studies",
-  },
-  {
-    name: "Kali Charan Rath",
-    organization:
-      "Gandhi Institute Of Engineering And Technology University, Gunupur",
-  },
-  {
-    name: "Madhusmita Panda",
-    organization: "Siskha O Anusandhan Deemed To Be University",
-  },
-  {
-    name: "Santosh Kumar Satapathy",
-    organization: "Pandit Deendayal Energy University",
-  },
-  { name: "Krishnaveni Bommidi", organization: "Gitam Deemed University" },
-  {
-    name: "Rajendra Prasad Nayak",
-    organization: "Government College Of Engineering Kalahandi Bhawanipatna",
-  },
-  {
-    name: "Dinesh Kumar Dash",
-    organization: "Parala Maharaja Engineering College",
-  },
-  {
-    name: "Basanta Kumar Swain",
-    organization: "Government College Of Engineering Kalahandi",
-  },
-  {
-    name: "Rashmi Ranjan Sahoo",
-    organization: "Parala Maharaja Engineering College",
-  },
-  {
-    name: "Leena Samantaray",
-    organization: "Ajay Binay Institute Of Technology",
-  },
-  {
-    name: "Pabitra Kumar Tripathy",
-    organization: "Kalam Institute Of Technology",
-  },
-  {
-    name: "Sipra Swain",
-    organization: "Siksha 'O' Anusandhan University, Iter, Bhubaneswar",
-  },
-  {
-    name: "Rajesh Kumar Behera",
-    organization:
-      "The Techno School (A Degree Engineering College), Bhubaneswar",
-  },
-  {
-    name: "Amar Ranjan Dash",
-    organization: "Parala Maharaja Engineering College",
-  },
-  {
-    name: "Subhrajit Pradhan",
-    organization: "Gandhi Institute Of Excellent Technocrats",
-  },
-  { name: "M.Baliar Singh", organization: "Gayatri Institute Of Management" },
-  {
-    name: "Umashankar Ghugar",
-    organization: "Srmist Delhi-Ncr Campus, Modinagar",
-  },
-  {
-    name: "Niranjan Panigrahi",
-    organization: "Parala Maharaja Engineering College Berhampur",
-  },
-  {
-    name: "Chandan Kumar Sahoo",
-    organization: "Gandhi Institute Of Excellent Technocrats, Bhubaneswar",
-  },
+  { name: "Basanta Kumar Swain", organization: "Government College Of Engineering Kalahandi" },
+  { name: "Bighnaraj Naik", organization: "Veer Surendra Sai University Of Technology, Burla" },
+  { name: "Chandan Kumar Sahoo", organization: "Gandhi Institute Of Excellent Technocrats, Bhubaneswar" },
+  { name: "Debabrata Dansana", organization: "Rajendra University, Balangir" },
+  { name: "Dillip Kumar Biswal", organization: "Aryan Institute Of Engineering And Technology, Bhubaneswar" },
+  { name: "Dinesh Kumar Dash", organization: "Parala Maharaja Engineering College" },
+  { name: "Gopal Behera", organization: "Government College Of Engineering Kalahandi" },
+  { name: "Gunamani Jena", organization: "Roland Institute Of Technology" },
+  { name: "Hemant Kumar Apat", organization: "Kiit Deemed University" },
   { name: "Jui Pattnayak", organization: "Jis College Of Engineering" },
+  { name: "K Hemant Kumar Reddy", organization: "Vit-Ap University" },
+  { name: "Kali Charan Rath", organization: "Gandhi Institute Of Engineering And Technology University, Gunupur" },
+  { name: "Kakita Murali Gopal", organization: "Gandhi Institute Of Engineering And Technology University, Odisha" },
+  { name: "Krishnaveni Bommidi", organization: "Gitam Deemed University" },
+  { name: "Leena Samantaray", organization: "Ajay Binay Institute Of Technology" },
+  { name: "M.Baliar Singh", organization: "Gayatri Institute Of Management" },
+  { name: "Madhusmita Panda", organization: "Siskha O Anusandhan Deemed To Be University" },
+  { name: "Malti Nagle", organization: "Pranveer Singh Institute Of Technology, Kanpur" },
+  { name: "Manoj Kumar Patra", organization: "National Institute Of Technology Warangal" },
+  { name: "Niranjan Panigrahi", organization: "Parala Maharaja Engineering College Berhampur" },
+  { name: "Om Prakash Jena", organization: "Ravenshaw University, Cuttack" },
+  { name: "Pabitra Kumar Tripathy", organization: "Kalam Institute Of Technology" },
   { name: "Prasenjit Dey", organization: "Nit Rourkela" },
-  {
-    name: "Sarita Nayak",
-    organization: "Suddhananda School Of Management & Computer Science",
-  },
+  { name: "Prahallad Kumar Sahu", organization: "Gandhi Institute Of Engineering And Technology, University, Gunupur" },
+  { name: "Priyadarsan Parida", organization: "Giet University" },
+  { name: "Purna Chandra Sethi", organization: "Rama Devi Women's University, Bhubaneswar" },
+  { name: "Purnendu Mishra", organization: "Vikash Institute Of Technology, Bargarh" },
+  { name: "Pushkar Kishore", organization: "Kiit University" },
+  { name: "Raghunandan Swain", organization: "Parala Maharaja Engineering College" },
+  { name: "Rajendra Prasad Nayak", organization: "Government College Of Engineering Kalahandi Bhawanipatna" },
+  { name: "Rajesh Kumar Behera", organization: "The Techno School (A Degree Engineering College), Bhubaneswar" },
+  { name: "Rajiv Senapati", organization: "Srm University, Andhra Pradesh" },
+  { name: "Ramesh Kumar Sahoo", organization: "Birla Global University, Bhubaneswar" },
+  { name: "Ranjan Keshari Pati", organization: "Modern Engineering And Management Studies" },
+  { name: "Rashmi Ranjan Sahoo", organization: "Parala Maharaja Engineering College" },
+  { name: "S Gopal Krishna Patro", organization: "School Of Engineering, Sreenidhi University, Hyderabad" },
+  { name: "Sambit Kumar Mishra", organization: "Gandhi Institute For Education And Technology, Baniatangi" },
+  { name: "Sanjaya Kumar Panda", organization: "Nit Warangal" },
+  { name: "Sanjib Kumar Nayak", organization: "Veer Surendra Sai University Of Technology Burla" },
+  { name: "Sandipan Sahu", organization: "Amity University Kolkata" },
+  { name: "Santanu Kumar Dash", organization: "Vellore Institute Of Technology, Vellore, India" },
+  { name: "Santosh Kumar Satapathy", organization: "Pandit Deendayal Energy University" },
+  { name: "Sarita Nayak", organization: "Suddhananda School Of Management & Computer Science" },
+  { name: "Sasmita Acharya", organization: "Veer Surendra Sai University Of Technology" },
+  { name: "Satyasundara Mahapatra", organization: "Pranveer Singh Institute Of Technology , Kanpur" },
   { name: "Srichandan Sobhanayak", organization: "Iiit Bhubaneswar" },
+  { name: "Sruti Ranjan Mishra", organization: "Gandhi Institute For Education And Management, Baniatangi" },
+  { name: "Subash Ranjan Kabat", organization: "Radhakrishna Institute Of Technology And Engineering" },
+  { name: "Subhrajit Pradhan", organization: "Gandhi Institute Of Excellent Technocrats" },
+  { name: "Subhransu Sekhar Dash", organization: "Government College Of Engineering, Kalahandi" },
+  { name: "Suman Kumar Das", organization: "University Of Brescia, Brescia, Italy" },
+  { name: "Sumit Kar", organization: "Biet, Bhadrak" },
+  { name: "Sunmya Das", organization: "Government College Of Engineering Kalahandi" }, // Corrected to "Soumya Das"
+  { name: "Supra Swain", organization: "Siksha 'O' Anusandhan University, Iter, Bhubaneswar" }, // Corrected to "Sipra Swain"
+  { name: "Sudheer Babu Punuri", organization: "Srm University, Andhra Pradesh" },
+  { name: "Swarmila Subramanian", organization: "Astha School Of Management" }, // Corrected to "Sharmila Subramanian"
+  { name: "Umashankar Ghugar", organization: "Srmist Delhi-Ncr Campus, Modinagar" },
+  { name: "Yatindra Gopal", organization: "National Institute Of Technology, Arunachal Pradesh" },
 ];
+
 
 export const trackChairMembers = [
   {
