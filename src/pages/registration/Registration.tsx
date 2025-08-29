@@ -1,6 +1,6 @@
 
 import TopBanner from "../../components/banner/TopBanner";
-import ToBeUpdated from "../../components/misc/ToBeUpdated";
+// import ToBeUpdated from "../../components/misc/ToBeUpdated";
 
 const Registration = () => {
   const registrationData = [
