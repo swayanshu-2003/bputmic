@@ -49,6 +49,15 @@ const Registration = () => {
                   </td>
                 </tr>
               ))}
+
+              <tr>
+                <td
+                  colSpan={2}
+                  className="py-3 px-4 text-center font-semibold bg-indigo-800 text-white"
+                >
+                  The number of pages is limited to 5 pages per paper. An additional ₹1000 is charged for each page beyond the initial 5 pages.
+                </td>
+              </tr>
               <tr>
                 <td
                   colSpan={2}
