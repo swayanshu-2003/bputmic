@@ -1,37 +1,34 @@
-// import CustomTable from "@/components/customs/CustomTable";
+
 import { ChevronsRight } from "lucide-react";
 import TopBanner from "../../components/banner/TopBanner";
 import CrcImg from "../../assets/misc/crc.png";
 import TailorImg from "../../assets/misc/tailor.png";
 import { FaFileDownload } from "react-icons/fa";
 
-// const feeData = [
-//   {
-//     Category: "Research Scholar / Student",
-//     "Indian Participants (in INR)": "6,500",
-//     "Foreign Participants (in USD)": "200",
-//   },
-//   {
-//     Category: "Faculty/ Academician/ Scientists",
-//     "Indian Participants (in INR)": "7,500",
-//     "Foreign Participants (in USD)": "200",
-//   },
-//   {
-//     Category: "Industry Experts",
-//     "Indian Participants (in INR)": "10,000",
-//     "Foreign Participants (in USD)": "200",
-//   },
-//   {
-//     Category: "Listeners",
-//     "Indian Participants (in INR)": "1,000",
-//     "Foreign Participants (in USD)": "-",
-//   },
-// ];
-
 const AutherGuidelines = () => {
-  const handleOpenDocx = () => {
-    // const docxUrl = `http://localhost:5173/template/Guidelines-for-Authors.docx`;
-    const docxUrl = `https://bputmic.in/template/Guidelines-for-Authors.docx`;
+
+  const templates = [
+    {
+      title: "Taylor & Francis Word template for authors",
+      link: "https://bputmic.in/template/Word_Template.docx"
+    },
+    {
+      title: "Taylor & Francis Sample Paper Format for authors",
+      link: "https://bputmic.in/template/Sample_Paper.docx"
+    },
+    {
+      title: "Guidelines for Authors",
+      link: "https://bputmic.in/template/Guidelines_for_Authors.docx"
+    },
+    {
+      title: "Manuscript Submission Guidelines",
+      link: "https://bputmic.in/template/Manuscript_submission_guidelines.docx"
+    }
+  ];
+
+  const handleOpenDocx = (link: string) => {
+    // const docxUrl = `https://bputmic.in/template/Guidelines-for-Authors.docx`;
+    const docxUrl = link;
     window.open(docxUrl, "_blank");
   };
 
@@ -98,22 +95,32 @@ const AutherGuidelines = () => {
         {/* manuscript guidelines */}
 
         <h3 className="text-2xl font-semibold text-[#112363] mt-6 mb-3">
-          Guidelines for Manuscript
+          Templates
         </h3>
+        <div className=" ml-6  text-zinc-700 w-full md:w-2/3">
+          {templates?.map((item, index) => (
+            <div
+              key={index}
+              className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 sm:gap-4 w-full text-zinc-700 border-b border-gray-200 py-2"
+            >
+              {/* Title */}
+              <div className="flex items-center gap-2">
+                <span className="font-semibold text-primary-red">
+                  <ChevronsRight />
+                </span>
+                <span className="text-sm sm:text-base">{item?.title} </span>
+              </div>
 
-        <div className=" ml-6 flex gap-2 items-center text-zinc-700 ">
-          <span className="font-semibold text-primary-red  ">
-            <ChevronsRight />
-          </span>
-
-          <span className="text-justify">Word Document : </span>
-          <button
-            onClick={handleOpenDocx}
-            className="bg-primary-red text-white px-4 py-1  hover:bg-blue-700 flex items-center gap-2 ml-3 font-semibold hover:italic"
-          >
-            Download
-            <FaFileDownload />
-          </button>
+              {/* Download button */}
+              <button
+                onClick={() => handleOpenDocx(item?.link)}
+                className="bg-primary-red text-white px-3 sm:px-4 py-1 sm:py-1  hover:bg-blue-700 flex items-center gap-2 font-semibold transition-all duration-300 max-w-fit"
+              >
+                <FaFileDownload />
+                <span>Download</span>
+              </button>
+            </div>
+          ))}
         </div>
 
         {/* <h3 className="text-2xl font-semibold text-[#112363] mt-6 mb-3">
