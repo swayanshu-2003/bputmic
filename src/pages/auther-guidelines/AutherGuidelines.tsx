@@ -1,5 +1,5 @@
 
-import { ChevronsRight } from "lucide-react";
+import { ChevronsRight, Link } from "lucide-react";
 import TopBanner from "../../components/banner/TopBanner";
 import CrcImg from "../../assets/misc/crc.png";
 import TailorImg from "../../assets/misc/tailor.png";
@@ -123,20 +123,74 @@ const AutherGuidelines = () => {
           ))}
         </div>
 
-        {/* <h3 className="text-2xl font-semibold text-[#112363] mt-6 mb-3">
-          Registration Fees
-        </h3> */}
-        {/* <CustomTable data={feeData} /> */}
-        {/* <h3 className="text-2xl font-semibold bg-[#112363] mb-3 text-white p-2 mx-auto">
-          To be Updated Soon...
-        </h3>
+
+
         <h3 className="text-2xl font-semibold text-[#112363] mt-6 mb-3">
-          Payment Details
-        </h3> */}
-        {/* <CustomTable data={feeData} /> */}
-        {/* <h3 className="text-2xl font-semibold bg-[#112363] mb-3 text-white p-2 mx-auto">
-          To be Updated Soon...
-        </h3> */}
+          Submission Guidelines
+        </h3>
+
+        <p className="text-justify text-zinc-700 ml-4 md:ml-6">
+          1. Interested Authors must submit their manuscript(s) (ensure it is
+          plagiarism-free) with their Microsoft CMT login using the submission
+          link:
+        </p>
+        <div className="ml-4 md:ml-6 flex flex-wrap items-center gap-2 text-zinc-700 px-4 py-2 bg-red-50 rounded mt-2">
+          <Link size={16} strokeWidth={3} className="text-[#112363]" />
+          <a
+            className="text-primary-red break-all"
+            href="https://cmt3.research.microsoft.com/BMIC2025/Submission/Index"
+            target="_blank"
+          >
+            https://cmt3.research.microsoft.com/BMIC2025/Submission/Index
+          </a>
+        </div>
+        <p className="text-justify text-zinc-700 ml-4 md:ml-6 mt-2">
+          NOTE: if the above submission link does not work, then copy the link
+          and paste it in a new Tab.
+        </p>
+        <p className="text-justify text-zinc-700 ml-4 md:ml-6 mt-2">
+          2. Notification of acceptance
+        </p>
+        <p className="text-justify text-zinc-700 ml-4 md:ml-6 mt-2">
+          3. Submission of Camera Ready Paper, Registration, and Copyright
+          within the deadline
+        </p>
+        <p className="text-justify text-zinc-700 ml-4 md:ml-6 mt-2">
+          4. Presentation by one of the authors
+        </p>
+        <p className="text-justify text-zinc-700 ml-4 md:ml-6 mt-2">
+          5. Publication of Proceedings
+        </p>
+        <p className="text-justify text-zinc-700 ml-4 md:ml-6 mt-2">
+          6. For any queries regarding submission of the manuscript plese follow
+          the link below
+        </p>
+        <a
+          className="text-primary-red break-all ml-10 mt-1.5 underline"
+          href="https://cmt3.research.microsoft.com/docs/help/general/account-creation.html"
+          target="_blank"
+        >
+          https://cmt3.research.microsoft.com/docs/help/general/account-creation.html
+        </a>
+
+        <p className="text-zinc-500 text-xs mt-6">
+          * The{" "}
+          <a
+            className="text-primary-red"
+            href="https://cmt3.research.microsoft.com"
+            target="_blank"
+          >
+            Microsoft CMT service
+          </a>{" "}
+          was used for managing the peer-reviewing process for this conference.
+          This service was provided for free by Microsoft and they borne all
+          expenses, including costs for Azure cloud services as well as for
+          software development and support.
+        </p>
+
+
+
+
       </div>
     </div>
   );
