@@ -31,7 +31,10 @@ const Schedule = () => {
                   <span className="font-semibold text-[#112363]">
                     <CalendarDays size={16} />
                   </span>
-                  <span>{item.date}</span>
+                  <div className="flex gap-2">
+                    {item?.old && <span className="line-through">{item.old}</span>}
+                    <span>{item.date}</span>
+                  </div>
                 </p>
               ))}
             </div>
@@ -54,7 +57,8 @@ const Schedule = () => {
                   <span className="font-semibold text-[#112363]">
                     <CalendarDays size={16} />
                   </span>
-                  <span>{item.date}</span>
+                  <span> {item?.old && <span className="line-through block">{item.old}</span>}
+                    {item.date}</span>
                 </p>
               </div>
             ))}

@@ -1,6 +1,6 @@
 import { CalendarDays } from "lucide-react";
 
-import {events} from "../../constants/dates"
+import { events } from "../../constants/dates"
 
 const Timelines = () => {
   return (
@@ -21,6 +21,11 @@ const Timelines = () => {
                 <CalendarDays className="text-white w-5 h-5 md:w-6 md:h-6" />
               </div>
               <div className="flex flex-col overflow-hidden">
+                {item?.old && (
+                  <h4 className="line-through text-xs md:text-sm font-semibold text-gray-600 leading-snug break-words">
+                    {item?.old}
+                  </h4>
+                )}
                 <h4 className="text-sm md:text-base font-semibold text-gray-800 leading-snug break-words">
                   {item.date}
                 </h4>
